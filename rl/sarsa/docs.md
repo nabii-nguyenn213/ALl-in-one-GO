@@ -3,7 +3,7 @@
 
 $$
 Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \delta_t
-$$ 
+$$
 where $\delta_t$ is the **TD Error**: 
 
 $$
@@ -15,10 +15,10 @@ For each episode:
     - Initialize state: $S_t =$ environment.reset()
     - Choose action using current policy: $A_t\sim\pi(\dot\lvert S_t)$
     - Take action: $S_{t+1}, R_{t+1}, \text{done} =$ env.step($A_t$)
-    - Choose next action using same policy: $\A_{t+1}\sim\pi(\dot\lvert S_{t+1})$
+    - Choose next action using same policy: $A_{t+1}\sim\pi(\dot\lvert S_{t+1})$
     - Update Q-value: 
 
-    $$ 
+    $$
     Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha[R_{t+1}+\gammaQ(s_{t+1}, a_{t+1})-Q(s_t, a_t)]
     $$
 
