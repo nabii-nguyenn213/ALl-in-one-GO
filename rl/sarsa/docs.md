@@ -18,7 +18,7 @@ For each episode:
     - Take action: $S_{t+1}, R_{t+1}, \text{done} =$ env.step($A_t$)
     - Choose next action using same policy: $A_{t+1}\sim\pi(\dot\lvert S_{t+1})$
     - Update Q-value: 
-        $$Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha[R_{t+1}+\gammaQ(s_{t+1}, a_{t+1})-Q(s_t, a_t)]$$
+        $$Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha[R_{t+1}+\gamma Q(s_{t+1}, a_{t+1})-Q(s_t, a_t)]$$
     - Move forward : $s_t\leftarrow s_{t+1}$ and $a_t\leftarrow a_{t+1}$
     - Repeat until episode ends.
 
