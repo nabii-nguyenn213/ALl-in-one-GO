@@ -2,7 +2,7 @@
 - The SARSA **update** is: 
 
 $$
-Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \delta_t 
+Q(s_t, a_t) \leftarrow Q(s_t, a_t) + \alpha \delta_t
 $$ 
 where $\delta_t$ is the **TD Error**: 
 
